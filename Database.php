@@ -1,14 +1,13 @@
 <?php
 class Database
 {
-    //property name
+    //property
     public $host = "localhost";
-    //method name
+    //method
     function connection()
     {
-        return $this->host;
+        return $this->hot;
     }
 }
 $db = new Database();
-// echo $db->connection();
-echo $db->host;
+echo $db->connection();
