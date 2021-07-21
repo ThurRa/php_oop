@@ -8,6 +8,11 @@ class Database
     {
         return $this->hot;
     }
+    function all($talbe = 'some')
+    {
+        return $table;
+    }
 }
 $db = new Database();
+echo $db->all('users');
 echo $db->connection();
