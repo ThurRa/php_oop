@@ -13,12 +13,13 @@ class Database
         return $table;
     }
 }
-class User
+class User extends Database
 {
     public function detail()
     {
-        $db = new Database();
-        echo $db->connection();
+        // $db = new Database();
+        // echo $db->connection();
+        $this->connection();
     }
 }
 $user = new User();
