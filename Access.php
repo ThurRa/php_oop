@@ -5,24 +5,29 @@ class Test
     // public ->all for all scope
     //protected ->use inside the class scope 1 and extends other class
     //private
-    //scope 1
-    protected $age = 22;
-    public function showAge()
+    //scope 
+    private $name = "thura";
+    public function showName()
     {
-        echo $this->age;
+        echo $this->name;
+    }
+    private function showAge()
+    {
+        echo "this show age private method";
+    }
+    public function some()
+    {
+        $this->showAge();
     }
 }
 $t = new Test();
-$t->showAge();
+echo $t->showName();
+$t->some();
+
 // scope 2
 
-class Person extends Test
+class Person
 {
     //scope 3
-    public function showAge()
-    {
-        echo $this->age;
-    }
+
 }
-$p = new Person();
-$p->showAge();
