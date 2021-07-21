@@ -2,26 +2,27 @@
 class Test
 {
     //access modifier
-    // public
-    //protected
+    // public ->all for all scope
+    //protected ->use inside the class scope 1 and extends other class
     //private
     //scope 1
-    public $name = "thura";
-    public function showName()
+    protected $age = 22;
+    public function showAge()
     {
-        echo $this->name;
+        echo $this->age;
     }
 }
+$t = new Test();
+$t->showAge();
 // scope 2
-$test = new Test();
-$test->showName();
-class Person
+
+class Person extends Test
 {
-    public function showname()
+    //scope 3
+    public function showAge()
     {
-        $test = new Test();
-        $test->showName();
+        echo $this->age;
     }
 }
 $p = new Person();
-$p->showname();
+$p->showAge();
