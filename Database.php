@@ -8,7 +8,7 @@ class Database
     {
         return $this->hot;
     }
-    function all($talbe = 'some')
+    function all($table = 'some')
     {
         return $table;
     }
